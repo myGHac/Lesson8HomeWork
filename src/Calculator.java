@@ -4,22 +4,20 @@ public class Calculator {
 
     public static class calculate {
 
-         static void calculate(double num1, double num2, double num3) {
+        static void calculate(double num1, double num2, double num3) {
 
-            double num;
-
-             num = num1/5;
-             System.out.println("Результат деления числа " + (String.format("%.0f", num1))  + " на 5 : " + num );
-
-             num = num2/5;
-             System.out.println("Результат деления числа " + (String.format("%.0f", num2)) + " на 5 : " + num );
-
-             num = num3/5;
-             System.out.println("Результат деления числа " + (String.format("%.0f", num3)) + " на 5 : " + num );
-
-            return;
+            double result;
+            result =  div5(num1);
+            System.out.println(" Результат : " + result);
+            result =  div5(num2);
+            System.out.println(" Результат : " + result);
+            result =  div5(num3);
+            System.out.println(" Результат : " + result);
+           return;
         }
-
+        static double div5(double number) {
+            return number/5;
+      }
         public static void main(String[] args) {
 
             System.out.println("Введите число: ");
@@ -37,8 +35,8 @@ public class Calculator {
             calculate(num1, num2, num3);
 
         }
-
     }
+  }
 
 
-}
+

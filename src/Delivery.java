@@ -2,41 +2,26 @@ import java.util.Scanner;
 
 public class Delivery {
 
-    static void delivery(int client) {
+    static int delivery(int client) {
 
-        int counter = 1;
-        //client = 6;
-        int factorial = 1;
 
-        factorial = factorial * counter;
-        counter++;
+        if (client == 1)
+            return 1;
+        else {
+            int minNum = client - 1;
+            return client * delivery(minNum);
+        }
 
-        //delivery(client);
-
-//         do {
-//             factorial = factorial * counter;
-//             counter++;
 //
-//         } while (counter <= client);
-//
-//         System.out.println("Возможных вариантов доставки : " + factorial);
-
-//        for (int i = 1; i <= client; i++) {
-//
-//            factorial = factorial * counter;
-//            counter++;
-//
-//           }
-        System.out.println("Вариантов доставки " + factorial);
-    }
+   }
         public static void main (String[] args){
 
             System.out.println("Введите число клиентов: ");
             Scanner sc = new Scanner(System.in);
             int client = sc.nextInt();
 
-            delivery(client);
-
+            int countDelivery = delivery(client);
+            System.out.println("Вариантов доставки " + countDelivery);
         }
 
 }
